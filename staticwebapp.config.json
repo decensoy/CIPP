@@ -79,7 +79,8 @@
       "X-Azure-FDID" : "c0404235-57c3-4a4c-ae48-a3aeba999e5e"
     },
     "allowedForwardedHosts": [
-      "afd-cipp-akeae4f6gde8athu.a03.azurefd.net"
+      "afd-cipp-akeae4f6gde8athu.a03.azurefd.net",
+      "cipp.decens.fi"
     ]
   },
   "navigationFallback": {
