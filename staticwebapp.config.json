@@ -36,25 +36,52 @@
     },
     {
       "route": "/authredirect",
-      "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
+      "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"],
+      "headers": {
+        "Cache-Control": "no-store"
+      }
     },
     {
       "route": "/LogoutRedirect",
-      "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
+      "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"],
+      "headers": {
+        "Cache-Control": "no-store"
+      }
     },
     {
       "route": "/404",
-      "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
+      "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"],
+      "headers": {
+        "Cache-Control": "no-store"
+      }
     },
     {
       "route": "/api/Public*",
-      "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
+      "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"],
+      "headers": {
+        "Cache-Control": "no-store"
+      }
     },
     {
       "route": "*",
-      "allowedRoles": ["admin", "editor", "readonly", "authenticated"]
+      "allowedRoles": ["admin", "editor", "readonly", "authenticated"],
+      "headers": {
+        "Cache-Control": "no-store"
+      }
     }
   ],
+
+  "networking": {
+    "allowedIpRanges": ["AzureFrontDoor.Backend"]
+  },
+  "forwardingGateway": {
+    "requiredHeaders": {
+      "X-Azure-FDID" : "c0404235-57c3-4a4c-ae48-a3aeba999e5e"
+    },
+    "allowedForwardedHosts": [
+      "afd-cipp-akeae4f6gde8athu.a03.azurefd.net"
+    ]
+  },
   "navigationFallback": {
     "rewrite": "index.html",
     "exclude": [
