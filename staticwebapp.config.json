@@ -36,60 +36,25 @@
     },
     {
       "route": "/authredirect",
-      "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"],
-      "headers": {
-        "Cache-Control": "no-store"
-      }
+      "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
     },
     {
       "route": "/LogoutRedirect",
-      "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"],
-      "headers": {
-        "Cache-Control": "no-store"
-      }
+      "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
     },
     {
       "route": "/404",
-      "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"],
-      "headers": {
-        "Cache-Control": "no-store"
-      }
+      "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
     },
     {
       "route": "/api/Public*",
-      "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"],
-      "headers": {
-        "Cache-Control": "no-store"
-      }
+      "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
     },
     {
       "route": "*",
-      "allowedRoles": ["admin", "editor", "readonly", "authenticated"],
-      "headers": {
-        "Cache-Control": "no-store"
-      }
+      "allowedRoles": ["admin", "editor", "readonly", "authenticated"]
     }
   ],
-  "login": {
-      "preserveUrlFragmentsForLogins": true,
-      "allowedExternalRedirectUrls": [
-          "https://cipp-swa.decens.fi",
-          "https://afd-cipp-akeae4f6gde8athu.a03.azurefd.net"
-      ]
-  },
-  "networking": {
-    "allowedIpRanges": ["AzureFrontDoor.Backend"]
-  },
-  "forwardingGateway": {
-    "requiredHeaders": {
-      "X-Azure-FDID" : "c0404235-57c3-4a4c-ae48-a3aeba999e5e"
-    },
-    "allowedForwardedHosts": [
-      "afd-cipp-akeae4f6gde8athu.a03.azurefd.net",
-      "cipp.decens.fi",
-      "cipp-swa.decens.fi"
-    ]
-  },
   "navigationFallback": {
     "rewrite": "index.html",
     "exclude": [
