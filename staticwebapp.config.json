@@ -70,7 +70,14 @@
       }
     }
   ],
-
+  "login": {
+      "preserveUrlFragmentsForLogins": true,
+      "allowedExternalRedirectUrls": [
+          "https://cipp-swa.decens.fi",
+          "https://jolly-mushroom-0d8222310.6.azurestaticapps.net",
+          "https://afd-cipp-akeae4f6gde8athu.a03.azurefd.net"
+      ]
+  },
   "networking": {
     "allowedIpRanges": ["AzureFrontDoor.Backend"]
   },
