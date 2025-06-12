@@ -81,6 +81,7 @@
     "allowedForwardedHosts": [
       "afd-cipp-akeae4f6gde8athu.a03.azurefd.net",
       "cipp.decens.fi",
+      "cipp-swa.decens.fi",
       "login.microsoftonline.com"
     ]
   },
